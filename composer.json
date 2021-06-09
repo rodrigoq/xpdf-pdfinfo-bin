@@ -1,0 +1,26 @@
+{
+	"name": "rodrigoq/xpdf-pdfinfo-bin",
+	"description": "Xpdf pdfinfo binaries x64",
+	"type": "library",
+	"license": "GPL-3.0-only",
+	"authors": [
+		{
+			"name": "rodrigoq",
+			"homepage": "https://github.com/rodrigoq"
+		}
+	],
+	"version": "3.04-nosec",
+	"autoload": {
+		"psr-4": {
+			"rodrigoq\\pdfinfo\\": "src/"
+		}
+	},
+	"extra": {
+		"original": [
+			{
+				"name": "xpdf",
+				"url": "https://www.xpdfreader.com"
+			}
+		]
+	}
+}
