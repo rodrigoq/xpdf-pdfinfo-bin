@@ -9,7 +9,7 @@
 			"homepage": "https://github.com/rodrigoq"
 		}
 	],
-	"version": "3.04-nosec",
+	"version": "4.03",
 	"autoload": {
 		"psr-4": {
 			"rodrigoq\\pdfinfo\\": "src/"
