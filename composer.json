@@ -1,5 +1,5 @@
 {
-	"name": "rodrigoq/xpdf-pdfinfo-bin",
+	"name": "mehrkanal/xpdf-pdfinfo-bin",
 	"description": "Xpdf pdfinfo binaries x64",
 	"type": "library",
 	"license": "GPL-3.0-only",
@@ -10,11 +10,7 @@
 		}
 	],
 	"version": "4.03",
-	"autoload": {
-		"psr-4": {
-			"rodrigoq\\pdfinfo\\": "src/"
-		}
-	},
+	"bin": ["bin/pdfinfo", "bin/pdfinfo.exe"],
 	"extra": {
 		"original": [
 			{
