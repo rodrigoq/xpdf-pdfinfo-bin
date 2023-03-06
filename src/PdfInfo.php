@@ -1,33 +1,34 @@
 <?php
 
-namespace rodrigoq\pdfinfo;
+namespace Mehrkanal\PdfInfo;
 
 class PdfInfo
 {
-	const BIN = 'pdfinfo';
+    const BIN = 'pdfinfo';
 
-	public static function GetBin() : string
-	{
-		self::SetX();
-		return self::BIN;
-	}
+    public static function getBin(): string
+    {
+        self::changePermissions();
+        return self::BIN;
+    }
 
-	public static function GetBinFullPath() : string
-	{
-		self::SetX();
-		return realpath(self::GetPath() . '/' . self::BIN);
-	}
+    public static function getBinFullPath(): string
+    {
+        self::changePermissions();
+        return realpath(self::GetPath() . '/' . self::BIN);
+    }
 
-	public static function GetPath() : string
-	{
-		return realpath(__DIR__ . '/../bin');
-	}
+    public static function getPath(): string
+    {
+        return dirname(__DIR__) . '/bin';
+    }
 
-	public static function setX() : void
-	{
-		$file = realpath(self::GetPath() . '/' . self::BIN);
-		if(fileperms($file) & 0777 !== 0755)
-			chmod($file, 0755);
-	}
+    public static function changePermissions(): void
+    {
+        $file = realpath(self::getPath() . '/' . self::BIN);
+        if (fileperms($file) & 0777 !== 0755) {
+            chmod($file, 0755);
+        }
+    }
 }
 

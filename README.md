@@ -7,7 +7,7 @@ https://www.xpdfreader.com/
 ## Installation
 
 ```shell
-composer require --prefer-dist rodrigoq/xpdf-pdfinfo-bin 
+composer require --prefer-dist mehrkanal/xpdf-pdfinfo-bin 
 ```
 
 ## Usage
@@ -23,3 +23,7 @@ vendor/bin/pdfinfo
 GPL v3 as indicated on the site:
 
 https://www.xpdfreader.com/opensource.html
+
+## Forked from 
+
+unmaintained `rodrigoq/xpdf-pdfinfo-bin`

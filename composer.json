@@ -1,22 +1,33 @@
 {
-	"name": "mehrkanal/xpdf-pdfinfo-bin",
-	"description": "Xpdf pdfinfo binaries x64",
-	"type": "library",
-	"license": "GPL-3.0-only",
-	"authors": [
-		{
-			"name": "rodrigoq",
-			"homepage": "https://github.com/rodrigoq"
-		}
-	],
-	"version": "4.03",
-	"bin": ["bin/pdfinfo", "bin/pdfinfo.exe"],
-	"extra": {
-		"original": [
-			{
-				"name": "xpdf",
-				"url": "https://www.xpdfreader.com"
-			}
-		]
-	}
+  "name": "mehrkanal/xpdf-pdfinfo-bin",
+  "description": "Xpdf pdfinfo binaries x64",
+  "type": "library",
+  "license": "GPL-3.0-only",
+  "authors": [
+    {
+      "name": "xpdf-pdfinfo-bin",
+      "homepage": "https://github.com/mehrkanal/xpdf-pdfinfo-bin"
+    }
+  ],
+  "version": "4.04",
+  "bin": [
+    "bin/pdfinfo",
+    "bin/pdfinfo.exe"
+  ],
+  "extra": {
+    "original": [
+      {
+        "name": "xpdf",
+        "url": "https://www.xpdfreader.com"
+      }
+    ]
+  },
+  "autoload": {
+    "psr-4": {
+      "Mehrkanal\\PdfInfo\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.0"
+  }
 }
