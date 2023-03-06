@@ -2,33 +2,24 @@
 
 namespace Mehrkanal\PdfInfo;
 
+use RuntimeException;
+
 class PdfInfo
 {
-    const BIN = 'pdfinfo';
-
-    public static function getBin(): string
-    {
-        self::changePermissions();
-        return self::BIN;
-    }
+    private const BIN = 'pdfinfo';
 
     public static function getBinFullPath(): string
     {
-        self::changePermissions();
-        return realpath(self::GetPath() . '/' . self::BIN);
+        $file = realpath(self::getBinaryPath() . '/' . self::BIN);
+        if ($file === false) {
+            throw new RuntimeException('Binary not found.');
+        }
+        return $file;
     }
 
-    public static function getPath(): string
+    public static function getBinaryPath(): string
     {
         return dirname(__DIR__) . '/bin';
-    }
-
-    public static function changePermissions(): void
-    {
-        $file = realpath(self::getPath() . '/' . self::BIN);
-        if (fileperms($file) & 0777 !== 0755) {
-            chmod($file, 0755);
-        }
     }
 }
 

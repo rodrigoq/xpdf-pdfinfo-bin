@@ -1,0 +1,5 @@
+parameters:
+    excludes_analyse:
+    level: 7
+    paths:
+        - src
